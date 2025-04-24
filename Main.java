@@ -1,13 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        // Cria a conta com saldo inicial
-        Account account = new Account(100);
-
+        // Cria contas separadas para cada cliente
         Client[] clients = {
-            new Client("Augustus", account),
-            new Client("Lucius", account),
-            new Client("Claudius", account),
-            new Client("Tiberius", account)
+            new Client("Augustus", new Account(100)),
+            new Client("Lucius", new Account(100)),
+            new Client("Claudius", new Account(100)),
+            new Client("Tiberius", new Account(100))
         };
 
         // Inicia as threads dos clientes
